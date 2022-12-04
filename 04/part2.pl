@@ -33,7 +33,7 @@ while(<>)
      
      if ( $res1 || $res2)
      {
-         $fullycontained++;
+         $overlapping++;
      }
 
  }
@@ -41,7 +41,7 @@ while(<>)
  
 }
 
-print "RESULT:: " . $fullycontained . "\n";
+print "RESULT:: " . $overlapping . "\n";
 
 sub getrange
 {
