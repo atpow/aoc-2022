@@ -1,7 +1,5 @@
 #!/usr/bin/perl
-
 $tot = 0;
-
 while(<>)
 {
     @array = split(//, $_);
@@ -10,17 +8,13 @@ while(<>)
         
     foreach $c ( @array )
     {
-        
         $logger[$pos]  = $c;
-        
-        #print "logger $pos =  $logger[$pos]  \n";
         if ( $pos >= 3)
         {
             print "Pattern is $logger[$pos-3] $logger[$pos-2] $logger[$pos-1] $logger[$pos] \n";
             $v = &checkforpattern($pos, $pos-3);
             print "UNIQ :: $v \n";
         }
-        
         $pos++;
     }
 }
@@ -36,7 +30,6 @@ sub checkforpattern
         print "CHECK $logger[$i] \n";
         ##add logger[$i] to an array
         push @temp , $logger[$i];
-        
     }
     
     my %uniq; 
@@ -46,9 +39,4 @@ sub checkforpattern
     print @temp;
     print "\n";
     return $count;
- 
-
 }
-
-#1271 too low
-#1274 too low
